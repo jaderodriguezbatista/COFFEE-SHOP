@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARCA | Café para llevar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <a href="#inicio"><img src="logo-moka.png" class="logo" alt="LOGO"></a>
+  <nav id="nav"><a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#como-pedir">Cómo pedir</a><a href="#contacto">Contacto</a></nav>
+  <button id="cartBtn" class="cart-btn">Carrito <span id="count">0</span></button>
+  <button id="menuBtn" class="menu-btn">☰</button>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div>
+    <small>CAFÉ · FRÍO · SELLADO</small>
+    <h1>Tu café.<br><i>Tu momento.</i></h1>
+    <p>Bebidas de café preparadas para llevar, disfrutar y repetir.</p>
+    <a class="btn dark" href="#menu">Ver menú</a>
+  </div>
+  <div class="hero-cup"><div class="cup"><b>MARCA</b></div><span>nuevo</span></div>
+</section>
+
+<section class="section" id="menu">
+  <div class="heading"><small>ELIGE TU FAVORITO</small><h2>Menú MARCA</h2><p>Explora nuestras bebidas y agrégalas a tu carrito.</p></div>
+  <div class="filters">
+    <button data-cat="todos" class="active">Todos</button>
+    <button data-cat="cafe">Café</button>
+    <button data-cat="frio">Fríos</button>
+    <button data-cat="especial">Especiales</button>
+  </div>
+  <div id="products" class="products"></div>
+</section>
+
+<section class="banner" id="nosotros">
+  <div><small>MARCA</small><h2>Pequeños momentos,<br>grandes cafés.</h2></div>
+  <p>Una experiencia moderna y pensada para ordenar fácilmente desde el celular.</p>
+</section>
+
+<section class="section" id="como-pedir">
+  <div class="heading"><small>SIMPLE Y RÁPIDO</small><h2>Cómo pedir</h2></div>
+  <div class="steps">
+    <article><b>01</b><h3>Elige</h3><p>Selecciona tus bebidas.</p></article>
+    <article><b>02</b><h3>Agrega</h3><p>Revisa cantidades y opciones.</p></article>
+    <article><b>03</b><h3>Paga</h3><p>Continúa al checkout seguro.</p></article>
+    <article><b>04</b><h3>Recibe</h3><p>Confirma entrega o recogida.</p></article>
+  </div>
+</section>
+
+<section class="contact" id="contacto"><div><small>¿TIENES UNA PREGUNTA?</small><h2>Hablemos de tu próximo café.</h2></div><a class="btn light" href="#">WhatsApp</a></section>
+</main>
+
+<footer><img src="logo-moka.png" alt="MARCA"><p>© 2026 MARCA. Todos los derechos reservados.</p></footer>
+
+<div id="overlay"></div>
+<aside id="cart">
+  <button id="closeCart" class="close">×</button>
+  <h2>Tu carrito</h2>
+  <div id="items"></div>
+  <div class="total"><span>Total</span><b id="total">RD$0</b></div>
+  <button id="checkout" class="btn dark full">Continuar al pago</button>
+  <p class="note">El pago real se conectará con el proveedor elegido por el negocio.</p>
+</aside>
+
+<div id="modal">
+  <div class="modal-box">
+    <button id="closeModal" class="close">×</button>
+    <small>CHECKOUT</small><h2>Completa tu pedido</h2>
+    <form id="form">
+      <input required placeholder="Nombre">
+      <input required placeholder="Teléfono">
+      <select><option>Recoger en tienda</option><option>Entrega a domicilio</option></select>
+      <input placeholder="Dirección">
+      <button class="btn dark full">Ir al pago</button>
+    </form>
+    <p class="note">Aquí conectaremos AZUL, CardNET u otro proveedor de pago.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
