@@ -4,17 +4,18 @@
 
 /* ---------- 1. VARIABLES ---------- */
 :root {
-    --dark: #2d2926;
-    --coffee: #62402f;
-    --cream: #f5eee5;
-    --paper: #fffaf4;
-    --gold: #c79662;
-    --line: #ddd0c2;
+    --dark: #3b2923;
+    --coffee: #6f4534;
+    --cream: #f4e7d8;
+    --paper: #fffaf5;
+    --gold: #c49a6c;
+    --green: #7b8061;
+    --line: #e3d5c6;
 
     --font-title: Georgia, "Times New Roman", serif;
-    --font-body: Arial, sans-serif;
+    --font-body: "Arial", sans-serif;
 
-    --shadow: 0 20px 45px rgba(45, 41, 38, 0.12);
+    --shadow: 0 18px 40px rgba(59, 41, 35, 0.12);
 }
 
 
@@ -72,7 +73,7 @@ a {
 }
 
 .logo {
-    width: 95px;
+    width: 80px;
     display: block;
 }
 
@@ -136,8 +137,14 @@ a {
 }
 
 .btn.dark {
-    background: var(--dark);
+    background: var(--coffee);
     color: white;
+    box-shadow: 0 10px 25px rgba(111, 69, 52, 0.20);
+}
+
+.btn.dark:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
 }
 
 .btn.light {
@@ -199,25 +206,39 @@ a {
     min-height: calc(100vh - 72px);
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
 
-    padding: 70px 8%;
+    padding: 80px 8%;
 
-    background: linear-gradient(
-        135deg,
-        #f8f0e7,
-        #ead9c8
-    );
+    background:
+        radial-gradient(circle at 80% 20%, rgba(196, 154, 108, 0.22), transparent 30%),
+        linear-gradient(135deg, #fffaf5 0%, #f4e7d8 100%);
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(123, 128, 97, 0.10);
+    top: -100px;
+    right: -80px;
 }
 
 .hero h1 {
     margin: 20px 0;
 
     font-family: var(--font-title);
-    font-size: clamp(60px, 8vw, 110px);
+    font-size: clamp(58px, 7vw, 100px);
     font-weight: 400;
-    line-height: 0.9;
+    line-height: 0.92;
+
+    color: var(--dark);
 }
 
 .hero h1 i {
@@ -225,22 +246,18 @@ a {
 }
 
 .hero p {
-    max-width: 500px;
+    max-width: 520px;
+
+    margin-bottom: 30px;
 
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
+
+    color: #66564d;
 }
 
-
-/* ---------- Hero / taza ---------- */
-
-.hero-cup {
-    min-height: 450px;
-
-    display: grid;
-    place-items: center;
-
-    position: relative;
+.hero small {
+    color: var(--green);
 }
 
 .cup {
@@ -543,22 +560,20 @@ a {
    ========================================================= */
 
 footer {
-    padding: 40px 20px;
-
+    padding: 45px 20px;
     background: var(--dark);
-    color: white;
-
+    color: var(--cream);
     text-align: center;
 }
 
 footer img {
-    width: 90px;
-    filter: invert(1);
+    width: 110px;
+    filter: none;
 }
 
 footer p {
     font-size: 13px;
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 
